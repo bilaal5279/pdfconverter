@@ -105,6 +105,7 @@ struct SettingsView: View {
                     .padding(.horizontal, 20)
                     
                     // MARK: - Developer Section
+#if DEBUG
                     VStack(alignment: .leading, spacing: 16) {
                         SectionHeader(title: "DEVELOPER")
                         
@@ -116,6 +117,7 @@ struct SettingsView: View {
                         }
                     }
                     .padding(.horizontal, 20)
+#endif
                     
                     // Footer
                     VStack(spacing: 6) {

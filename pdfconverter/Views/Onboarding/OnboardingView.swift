@@ -1,8 +1,10 @@
 import SwiftUI
+import StoreKit
 
 struct OnboardingView: View {
     @State private var currentPage = 0
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
+    @Environment(\.requestReview) var requestReview
     
     // Animation State for Mesh Gradient
     @State private var animateGradient = false
@@ -137,6 +139,9 @@ struct OnboardingView: View {
             }
         }
         .onChange(of: currentPage) { _, newValue in
+             if newValue == 1 {
+                 requestReview()
+             }
              if newValue == slides.count {
                  hasSeenOnboarding = true
              }
