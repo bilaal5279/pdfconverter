@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EC91A0A32EEF1D6900A46DCA /* ReceiptParser in Frameworks */ = {isa = PBXBuildFile; productRef = EC91A0A22EEF1D6900A46DCA /* ReceiptParser */; };
+		EC91A0A52EEF1D6900A46DCA /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = EC91A0A42EEF1D6900A46DCA /* RevenueCat */; };
+		EC91A0A72EEF1D6900A46DCA /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = EC91A0A62EEF1D6900A46DCA /* RevenueCatUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		EC91A00C2EEE17D800A46DCA /* pdfconverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pdfconverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC91A0A52EEF1D6900A46DCA /* RevenueCat in Frameworks */,
+				EC91A0A32EEF1D6900A46DCA /* ReceiptParser in Frameworks */,
+				EC91A0A72EEF1D6900A46DCA /* RevenueCatUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,9 @@
 			);
 			name = pdfconverter;
 			packageProductDependencies = (
+				EC91A0A22EEF1D6900A46DCA /* ReceiptParser */,
+				EC91A0A42EEF1D6900A46DCA /* RevenueCat */,
+				EC91A0A62EEF1D6900A46DCA /* RevenueCatUI */,
 			);
 			productName = pdfconverter;
 			productReference = EC91A00C2EEE17D800A46DCA /* pdfconverter.app */;
@@ -107,6 +119,9 @@
 			);
 			mainGroup = EC91A0032EEE17D800A46DCA;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EC91A0A12EEF1D6900A46DCA /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EC91A00D2EEE17D800A46DCA /* Products */;
 			projectDirPath = "";
@@ -150,6 +165,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pdfconverter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PDF Converter";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -184,6 +201,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pdfconverter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PDF Converter";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -349,6 +368,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC91A0A12EEF1D6900A46DCA /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.50.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC91A0A22EEF1D6900A46DCA /* ReceiptParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC91A0A12EEF1D6900A46DCA /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = ReceiptParser;
+		};
+		EC91A0A42EEF1D6900A46DCA /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC91A0A12EEF1D6900A46DCA /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
+		};
+		EC91A0A62EEF1D6900A46DCA /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC91A0A12EEF1D6900A46DCA /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCatUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC91A0042EEE17D800A46DCA /* Project object */;
 }

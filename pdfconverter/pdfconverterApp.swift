@@ -12,7 +12,7 @@ import SwiftData
 struct pdfconverterApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            ScannedDocument.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -22,10 +22,16 @@ struct pdfconverterApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+    
+    init() {
+        SubscriptionService.shared.configure()
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .preferredColorScheme(.light)
+                .environmentObject(SubscriptionService.shared)
         }
         .modelContainer(sharedModelContainer)
     }
